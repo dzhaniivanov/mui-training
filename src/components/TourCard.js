@@ -32,15 +32,15 @@ const theme = createTheme({
 });
 
 
-const TourCard = () => {
+const TourCard = ({ tour }) => {
     return (
         <Grid item xs={3}>
             <ThemeProvider theme={theme}>
                 <Paper elevation={3}>
-                    <img src="https://tcproduction.blob.core.windows.net/media/%7B240f8b72-1159-4fd3-a150-0a837f50ba4a%7D.2573758641_297d6d19fa_o.jpg" className='img' alt="" />
+                    <img src={tour.image} className='img' alt="" />
                     <Box paddingX={1}>
                         <Typography component="h4" variant="subtitle1">
-                            Immerse into the Falls
+                            {tour.name}
                         </Typography>
                         <Box
                             sx={{
@@ -50,7 +50,7 @@ const TourCard = () => {
                         >
                             <AccessTime sx={{ width: 12.5 }} />
                             <Typography variant="body2" component="p" marginLeft={0.5}>
-                                5 hours
+                                {tour.duration} hours
                             </Typography>
                         </Box>
                         <Box
@@ -62,7 +62,7 @@ const TourCard = () => {
                         >
                             <Rating
                                 name="read-only"
-                                value={4.5}
+                                value={tour.rating}
                                 precision={0.5}
                                 readOnly
                                 size="small"
@@ -71,12 +71,12 @@ const TourCard = () => {
                                 4.5
                             </Typography>
                             <Typography variant="body3" component="p" marginLeft={1.5}>
-                                (655 reviews)
+                                ({tour.numberOfReviews} reviews)
                             </Typography>
                         </Box>
                         <Box>
                             <Typography variant="h6" component="h3" marginTop={0}>
-                                $147
+                                ${tour.price}
                             </Typography>
                         </Box>
                     </Box>
