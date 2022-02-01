@@ -6,7 +6,7 @@ import BasicModal from "../components/Modal";
 
 const Tour = () => {
     return (
-        <Container sx={{ width: 900 }}>
+        <Container xs={12} sm={8} md={6} lg={3} xl={0}>
             <Typography variant="h3" component="h1" marginTop={3}>
                 Explore the World in Vegas
             </Typography>
@@ -32,10 +32,10 @@ const Tour = () => {
                 </Typography>
                 <CustomizedAccordions />
             </Box>
-            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3} xs={12} sm={8} md={6} lg={3} xl={0}>
                 <BottomNavigation
                 >
-                    <BasicModal/>
+                    <BasicModal />
                 </BottomNavigation>
             </Paper>
         </Container>

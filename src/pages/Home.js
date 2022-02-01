@@ -6,7 +6,6 @@ import { Typography } from "@mui/material";
 
 const Home = () => {
     return (<div className="app">
-        
         <Container sx={{ marginY: 5 }}>
             {cities.map((city) => (
                 <>

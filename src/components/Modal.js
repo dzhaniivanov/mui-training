@@ -30,7 +30,7 @@ export default function BasicModal() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
+                <Box sx={style} xs={12} sm={8} md={6} lg={3} xl={0}>
                     <StaticDateRangePickerDemo />
                 </Box>
             </Modal>
