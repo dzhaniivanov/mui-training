@@ -1,5 +1,7 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, Paper, BottomNavigation, } from "@mui/material";
+import CustomizedAccordions from "../components/Accordian";
 import ImageCollage from "../components/ImageCollage";
+import BasicModal from "../components/Modal";
 
 
 const Tour = () => {
@@ -14,8 +16,28 @@ const Tour = () => {
                     alt=""
                     height={325}
                 />
-                <ImageCollage/>
+                <ImageCollage />
             </Box>
+            <Box>
+                <Typography variant="h6" component="h4" marginTop={3}>
+                    About this ticket
+                </Typography>
+                <Typography variant="paragraph" component="p" marginTop={3}>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi esse officiis non architecto qui iusto est, ipsam totam odio numquam cum eum perferendis, labore, eius beatae inventore quas minima mollitia. Dolorem nihil dolorum inventore vitae optio dolor itaque dignissimos delectus?
+                </Typography>
+            </Box>
+            <Box marginBottom={10}>
+                <Typography variant="h6" component="h4" marginTop={3} marginBottom={2}>
+                    Frequently Asked Question
+                </Typography>
+                <CustomizedAccordions />
+            </Box>
+            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+                <BottomNavigation
+                >
+                    <BasicModal/>
+                </BottomNavigation>
+            </Paper>
         </Container>
     );
 };
