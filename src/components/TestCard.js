@@ -20,7 +20,7 @@ const TestCard = () => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Fab size="small" variant="extended" color="primary">Share</Fab>
+                <Fab size="large" variant="extended" color="primary">Share</Fab>
                 <Fab size="small" variant="extended" color="secondary">Learn More</Fab>
             </CardActions>
         </Card>
